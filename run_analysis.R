@@ -59,10 +59,10 @@ extracted_data$Activity <- as.factor(extracted_data$Activity)
 extracted_data$Subject <- as.factor(extracted_data$Subject)
 
 # "Defactorize" the activity labels
-act_labels_char <- as.character(levels(activity_labels[,2]))
+#act_labels_char <- as.character(levels(activity_labels[,2]))
 
 # rename the activities
-extracted_data$Activity <- mapvalues(extracted_data$Activity, from = activity_labels[ ,1], to =act_labels_char)
+extracted_data$Activity <- mapvalues(extracted_data$Activity, from = activity_labels[ ,1], to = as.character(activity_labels[,2]))
 
 # Part 4
 # Appropriately labels the data set with descriptive variable names.
@@ -77,6 +77,7 @@ names(extracted_data) <- gsub('\\.mean',".Mean",names(extracted_data))
 names(extracted_data) <- gsub('\\.std',".Std.Deviation",names(extracted_data))
 names(extracted_data) <- gsub('Freq\\.',"Frequency.",names(extracted_data))
 names(extracted_data) <- gsub('Freq$',"Frequency",names(extracted_data))
+names(extracted_data) <- gsub('BodyBody',"Body",names(extracted_data))
 
 # Part 5
 # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
