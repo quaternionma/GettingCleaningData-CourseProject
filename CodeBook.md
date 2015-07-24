@@ -14,11 +14,11 @@ The script `run_analysis.R` performs following procedural steps to generate the 
 1. loads the libraries `plyr` and `dplyr`
 2. If the data isn't allready in a __dada__ folder in the working directory, the data set is downloaded from the provided URL and unzipped.
 3. reads the training and test data along with the subject ID (volunteers' ID) and the activity ID
-4. merges the data to form one data set as a data frame with _10299 observables_ and _563 variables_ with the subject and activity ID in the first two columns
+4. merges the data to form one data set as a data frame with **_10299 observables_** and **_563 variables_** with the subject and activity ID in the first two columns
 5. Renames the first two columns to __"Subject"__ and __"Activity"__
 6. uses the `make.names()` to provide valid column names in order to avoid duplicates
 7. sorts the data set for __"Subject"__ and __"Activity"__
-8. extracts only the measurements on the mean and standard deviation for each measurement this is a data frame with _10299 observables_ and _88 variables_.
+8. extracts only the measurements on the mean and standard deviation for each measurement this is a data frame with **_10299 observables_** and **_88 variables_**.
 9. sets the variables __"Subject"__ and __"Activity"__ to factor variables
 10. renames the activity ID to the corresponding activity name according to:
 
@@ -32,7 +32,7 @@ The script `run_analysis.R` performs following procedural steps to generate the 
 | 6 | LAYING |
 
 11. labels the measurement variables with more descriptive names
-12. Creates an new data set containing the average of each measuremnt variable of the extracted data set from step 8. for each activity and each subject. The result is a data frame with _180 observables_ and _88 variables_.
+12. Creates an new data set containing the average of each measuremnt variable of the extracted data set from step 8. for each activity and each subject. The result is a data frame with **_180 observables_** and **_88 variables_**.
 13. writes a `tidy_dataset.txt`file with the dataset inside.
 
 The 88 variables are:
