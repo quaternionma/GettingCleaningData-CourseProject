@@ -38,8 +38,8 @@ You should create one R script called run_analysis.R that does the following.
 
 ## How the tidy dataset is created:
 
-1. clone this repository `https://github.com/quaternionma/GettingCleaningData-CourseProject.git` to your working directory or set the working directory `setwd()` to the download directory 
-2. source run_analisys.R script (it requires the plyr an dplyr packages): `source('run_analysis.R')`
+1. clone this repository https://github.com/quaternionma/GettingCleaningData-CourseProject.git to a working directory. Set this as the R working directory with `setwd()` or  
+2. source run_analisys.R script (it requires the plyr an dplyr packages): `source('path_to/run_analysis.R', chdir = TRUE)`
 
 3. In the working directory you'll find the file `tidy_dataset.txt` with the tidy data set in it.
 
